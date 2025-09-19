@@ -1,0 +1,86 @@
+@import url('./index.css');
+
+.apresentacao{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+
+    & .redes{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+
+        & i{
+            font-size: var(--font-size-title-sec);
+            color: var(--theme-ligth-secondary);
+            transition: 0.3s;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    & img{
+        width: 25vw;
+        height: 25vw;
+        border-radius: 50%;
+    }
+
+    & .btns{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        & .main-btn{
+            background-color: var(--theme-ligth-tertiary);
+            border: 1px solid var(--theme-ligth-secondary);
+            color: var(--theme-ligth-secondary);
+            transition: 0.3s;
+            &:hover{
+                background-color: var(--theme-ligth-secondary);
+                color: var(--white);
+                border: none;
+                box-shadow: var(--shadow-md);
+                transform: scale(1.05);
+                
+            }
+        }
+    }
+
+    &.dark{
+        & .redes i{
+            color: var(--theme-dark-secondary);
+        }
+
+        & .btns .main-btn{
+            background-color: var(--theme-dark-tertiary);
+            border: 1px solid var(--theme-dark-secondary);
+            color: var(--theme-dark-secondary);
+            &:hover{
+                background-color: var(--theme-dark-secondary);
+                color: var(--white);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .apresentacao{
+        flex-direction: column-reverse;
+        text-align: center;
+        justify-content: center;
+        gap: 2rem;
+        text-align: start;
+
+        & img{
+            width: 50vw;
+            height: 50vw;
+        }
+
+        & .btns{
+            justify-content: center;
+        }
+    }
+}

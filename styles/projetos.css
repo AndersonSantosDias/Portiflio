@@ -1,0 +1,159 @@
+@import url('./index.css');
+
+.projetos{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 11vh;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    & .container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        padding: 20px;
+        width: 100vw;
+        row-gap: 20px;
+
+        & .card-projeto{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            width: 400px;
+            padding: 20px;
+            box-shadow: var(--shadow-lg);
+            background-color: var(--theme-ligth-thetiary);
+            border-radius: 10px;
+            
+
+            & .img-container{
+                width: 100%;
+                border-radius: 10px;
+                background-color: var(--theme-ligth-primary);
+                background-image: url('../imagens/portifolio-dasktop.png');
+                background-size: cover;
+                border: 2px solid var(--theme-ligth-secondary);
+                & .mobile{
+                    height: 164px;
+                    transform: translate(300px, 2px);
+                    border: 2px solid var(--theme-ligth-secondary);
+                    border-radius: 10px;
+                }
+            }
+
+            & .list-tec{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                gap: 10px;
+                border-radius: 10px;
+
+                    & svg{
+                        height: 30px;
+                        width: 30px;
+                        fill: var(--theme-ligth-secondary);
+
+                        &.cssvg{
+                            height: 36px;
+                            width: 36px;
+                        }
+                    }
+            }
+
+            & .desc{
+                width: 100%;
+                border-radius: 10px;
+                text-align: justify;
+            }
+
+            & .buttons-projeto{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                width: 100%;
+
+                & .btn-projeto{
+                    width: 150px;
+                    background-color: transparent;
+                    border: 1px solid var(--theme-ligth-secondary);
+                    color: var(--theme-ligth-secondary);
+                    box-shadow: var(--shadow-sm);
+                    transition: 0.3s;
+
+                    &:hover{
+                       background-color: var(--theme-ligth-primary);
+                       box-shadow: var(--shadow-lg);
+                    }
+                }
+            }
+        }
+    }
+
+    &.dark{
+        & .container{
+            & .card-projeto{
+                background-color: var(--theme-dark-thetiary);
+
+                & .img-container{
+                    border: 1px solid var(--theme-dark-secondary);
+                    background-color: var(--theme-dark-primary);
+                    & .mobile{
+                        border: 1px solid var(--theme-dark-secondary);
+                    }
+                }
+
+                & .list-tec{
+                    & svg{
+                        fill: var(--theme-dark-secondary);
+                    }
+                }
+
+                & .buttons-projeto{
+                    & .btn-projeto{
+                    border: 1px solid var(--theme-dark-secondary);
+                    color: var(--theme-dark-secondary);
+                    box-shadow: var(--shadow-sm-dark);
+                    &:hover{
+                       background-color: var(--theme-dark-primary);
+                       box-shadow: var(--shadow-lg-dark);
+                    }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px){
+
+    .projetos{
+        & .container{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 50px;
+
+            & .card-projeto{
+                width: 350px;
+
+                & .img-container{
+                    & .mobile{
+                        transform: translate(250px, 2px);
+                    }
+                }
+            }
+        }
+    }
+}
