@@ -15,7 +15,7 @@
 
         & i{
             font-size: var(--font-size-title-sec);
-            color: var(--theme-ligth-secondary);
+            color: var(--accent-primary);
             transition: 0.3s;
             &:hover{
                 transform: scale(1.2);
@@ -34,33 +34,23 @@
         flex-direction: row;
         gap: 1rem;
         & .main-btn{
-            background-color: var(--theme-ligth-tertiary);
-            border: 1px solid var(--theme-ligth-secondary);
-            color: var(--theme-ligth-secondary);
-            transition: 0.3s;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            color: var(--accent-primary);
+            transition: 0.5s;
+            cursor: pointer;
+            user-select: none;
+            padding: 10px 20px;
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-text-small);
+            font-weight: 600;
             &:hover{
-                background-color: var(--theme-ligth-secondary);
-                color: var(--white);
+                background-color: var(--accent-primary);
+                color: var(--text-inverted);
                 border: none;
                 box-shadow: var(--shadow-md);
                 transform: scale(1.05);
                 
-            }
-        }
-    }
-
-    &.dark{
-        & .redes i{
-            color: var(--theme-dark-secondary);
-        }
-
-        & .btns .main-btn{
-            background-color: var(--theme-dark-tertiary);
-            border: 1px solid var(--theme-dark-secondary);
-            color: var(--theme-dark-secondary);
-            &:hover{
-                background-color: var(--theme-dark-secondary);
-                color: var(--white);
             }
         }
     }

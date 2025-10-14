@@ -23,7 +23,8 @@
             width: 600px;
             min-height: 450px;
             box-shadow: var(--shadow-lg);
-            background-color: var(--theme-ligth-thetiary);
+            background-color: var(--bg-secondary);
+            transition: background-color 0.3s ease;
             padding: 10px;
             border-radius: var(--radius-lg);
 
@@ -53,38 +54,20 @@
                     transition: 0.5s;
 
                     &:hover{
-                        box-shadow: 0 0 5px var(--theme-ligth-secondary);
+                        box-shadow: 0 0 5px var(--accent-primary);
                     }
 
                     & p{
                         margin: 0;
                         font-size: 0.75rem;
-                        color: var(--theme-ligth-secondary);
+                        color: var(--accent-primary);
                         transition: 0.5s;
                     }
 
                     & svg{
-                        fill: var(--theme-ligth-secondary);
+                        fill: var(--accent-primary);
                         transition: 0.5s;  
                     }
-                }
-            }
-        }
-    }
-
-    &.dark{
-        & .container .stack{
-            background-color: var(--theme-dark-thetiary);
-            & .skillist .skill-iten{
-                box-shadow: var(--shadow-md);
-                &:hover{
-                    box-shadow: 0 0 5px var(--theme-dark-secondary);
-                }
-                & p{
-                    color: var(--theme-dark-secondary);
-                }
-                & svg{
-                    fill: var(--theme-dark-secondary);
                 }
             }
         }

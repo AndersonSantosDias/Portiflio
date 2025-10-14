@@ -14,12 +14,15 @@
     --radius-pill: 9999px;
     --radius-circle: 50%; 
 
-    --theme-dark-primary: #2b2a2f ;
-    --theme-dark-secondary: #fe7e08;
-    --theme-dark-thetiary: #27262b;
-    --theme-ligth-primary: #F7F7F7 ;
-    --theme-ligth-secondary: #7E08FE;
-    --theme-ligth-thetiary: #ececec;
+    /* Semantic Colors - Default to Light Theme */
+    --bg-primary: #F9FAFB;
+    --bg-secondary: #F3F4F6;
+    --accent-primary: #7C3AED;
+    --text-primary: #111827;
+    --text-inverted: #F9FAFB;
+    --border-color: #7C3AED;
+
+    /* Raw Colors */
     --black: #000;
     --white: #fff;
     
@@ -66,8 +69,8 @@ svg{
 }
 
 main{
-    background-color: var(--theme-ligth-primary);
-    color: var(--black);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
 
     & h1{
         font-size: var(--font-size-title-main);
@@ -89,8 +92,13 @@ main{
     & span{
         font-size: var(--font-size-text-small);
     }
-    &.dark{
-        background-color: var(--theme-dark-primary);
-        color: var(--white);
-    }
+}
+
+body.dark{
+    --bg-primary: #111827;
+    --bg-secondary: #1F2937;
+    --accent-primary: #F97316;
+    --text-primary: #D1D5DB;
+    --text-inverted: #111827;
+    --border-color: #F97316;
 }

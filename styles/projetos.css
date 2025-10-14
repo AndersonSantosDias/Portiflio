@@ -29,21 +29,34 @@
             width: 400px;
             padding: 20px;
             box-shadow: var(--shadow-lg);
-            background-color: var(--theme-ligth-thetiary);
+            background-color: var(--bg-secondary);
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
             border-radius: 10px;
             
+            &:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+
+            & h3 {
+                font-size: var(--font-size-subtitle);
+                margin-bottom: 0;
+            }
 
             & .img-container{
+                position: relative;
+                height: 180px; /* Altura ajustada para conter as imagens */
                 width: 100%;
                 border-radius: 10px;
-                background-color: var(--theme-ligth-primary);
-                background-image: url('../imagens/portifolio-dasktop.png');
+                background-color: var(--bg-primary);
                 background-size: cover;
-                border: 2px solid var(--theme-ligth-secondary);
+                border: 1px solid var(--border-color);
                 & .mobile{
-                    height: 164px;
-                    transform: translate(300px, 2px);
-                    border: 2px solid var(--theme-ligth-secondary);
+                    position: absolute;
+                    height: 95%;
+                    right: -15px; /* Posiciona à direita com um pequeno deslocamento */
+                    bottom: -10px; /* Posiciona na base com um pequeno deslocamento */
+                    border: 1px solid var(--border-color);
                     border-radius: 10px;
                 }
             }
@@ -61,7 +74,7 @@
                     & svg{
                         height: 30px;
                         width: 30px;
-                        fill: var(--theme-ligth-secondary);
+                        fill: var(--accent-primary);
 
                         &.cssvg{
                             height: 36px;
@@ -73,7 +86,7 @@
             & .desc{
                 width: 100%;
                 border-radius: 10px;
-                text-align: justify;
+                text-align: center;
             }
 
             & .buttons-projeto{
@@ -85,50 +98,24 @@
                 width: 100%;
 
                 & .btn-projeto{
+                    /* Estilos para garantir que a tag <a> se pareça com um botão */
+                    display: inline-block;
+                    text-align: center;
+                    padding: 10px 20px;
+                    border-radius: var(--radius-md);
+                    font-size: var(--font-size-text-small);
+                    font-weight: 600;
+                    user-select: none;
                     width: 150px;
                     background-color: transparent;
-                    border: 1px solid var(--theme-ligth-secondary);
-                    color: var(--theme-ligth-secondary);
+                    border: 1px solid var(--border-color);
+                    color: var(--accent-primary);
                     box-shadow: var(--shadow-sm);
                     transition: 0.3s;
 
                     &:hover{
-                       background-color: var(--theme-ligth-primary);
+                       background-color: var(--bg-primary);
                        box-shadow: var(--shadow-lg);
-                    }
-                }
-            }
-        }
-    }
-
-    &.dark{
-        & .container{
-            & .card-projeto{
-                background-color: var(--theme-dark-thetiary);
-
-                & .img-container{
-                    border: 1px solid var(--theme-dark-secondary);
-                    background-color: var(--theme-dark-primary);
-                    & .mobile{
-                        border: 1px solid var(--theme-dark-secondary);
-                    }
-                }
-
-                & .list-tec{
-                    & svg{
-                        fill: var(--theme-dark-secondary);
-                    }
-                }
-
-                & .buttons-projeto{
-                    & .btn-projeto{
-                    border: 1px solid var(--theme-dark-secondary);
-                    color: var(--theme-dark-secondary);
-                    box-shadow: var(--shadow-sm-dark);
-                    &:hover{
-                       background-color: var(--theme-dark-primary);
-                       box-shadow: var(--shadow-lg-dark);
-                    }
                     }
                 }
             }
@@ -150,7 +137,8 @@
 
                 & .img-container{
                     & .mobile{
-                        transform: translate(250px, 2px);
+                        /* O posicionamento absoluto já se ajusta, mas podemos refinar se necessário */
+                        right: -10px;
                     }
                 }
             }
