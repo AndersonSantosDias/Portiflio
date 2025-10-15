@@ -3,8 +3,8 @@
 .projetos{
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    padding-top: 11vh;
+    min-height: 100dvh;
+    padding-top: 11dvh;
     align-items: center;
     justify-content: center;
     gap: 50px;

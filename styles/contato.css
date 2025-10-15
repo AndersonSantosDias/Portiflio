@@ -5,8 +5,8 @@
     align-items: center;
     gap: 50px;
     text-align: center;
-    min-height: 100vh;
-    padding-top: 10vh;
+    min-height: 100dvh;
+    padding-top: 10dvh;
     padding-bottom: 50px;
 
     & .txt-contato{

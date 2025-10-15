@@ -5,7 +5,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    height: 100vh;
+    height: 100dvh;
 
     & .redes{
         display: flex;
