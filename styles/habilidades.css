@@ -5,70 +5,41 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100dvh;
     padding-top: 11dvh;
+
     gap: 50px;
     & .container{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        padding: 10px;
-
-        & .stack{
+        width: 60%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 10px 50px;
+        & .skill-iten{
             display: flex;
-            flex-direction: column;
-            gap: 20px;
-            width: 600px;
-            min-height: 450px;
-            box-shadow: var(--shadow-lg);
-            background-color: var(--bg-secondary);
-            transition: background-color 0.3s ease;
-            padding: 10px;
-            border-radius: var(--radius-lg);
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 999px;
+            height: 3rem;
+            max-width: 250px;
+            box-shadow: var(--shadow-sm);
+            gap: 15px;
+            cursor: default;
+            transition: 0.5s;
 
-            & h3{
-                text-align: center;
+            &:hover{
+                box-shadow: 0 0 5px var(--accent-primary);
             }
-            & .skillist{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                gap: 10px;
-                width: 100%;
-                height: 20rem;
-                padding: 5px;
 
-                & .skill-iten{
-                    display: flex;
-                    align-items: center;
-                    padding: 10px 20px;
-                    border-radius: 999px;
-                    width: 30%;
-                    height: 3rem;
-                    box-shadow: var(--shadow-sm);
-                    gap: 10px;
-                    cursor: default;
-                    transition: 0.5s;
+            & p{
+                margin: 0;
+                font-size: 0.75rem;
+                color: var(--accent-primary);
+                transition: 0.5s;
+            }
 
-                    &:hover{
-                        box-shadow: 0 0 5px var(--accent-primary);
-                    }
-
-                    & p{
-                        margin: 0;
-                        font-size: 0.75rem;
-                        color: var(--accent-primary);
-                        transition: 0.5s;
-                    }
-
-                    & svg{
-                        fill: var(--accent-primary);
-                        transition: 0.5s;  
-                    }
-                }
+            & svg{
+                fill: var(--accent-primary);
+                transition: 0.5s;  
             }
         }
     }
@@ -76,29 +47,18 @@
 
 @media screen and (max-width: 1300px) {
     .skills{
-        & .container{
-            gap: 50px;
-            flex-direction: column;
-            align-items: center;
-        }
+        .container {
+            grid-template-columns: repeat(3, 1fr);
+        }   
     }
 }
 
 @media screen and (max-width: 850px) {
     .skills{
-        & .container{
-            & .stack{
-                width: 90%;
-                & .skillist{
-                    justify-content: center;
-                    height: fit-content;
-                    gap: 1rem;
-                    padding-bottom: 10px;
-                    & .skill-iten{
-                        width: 90%;
-                    }
-                }
-            }
+        .container {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 10px 20px;
+            width: 100%;
         }
     }
 }

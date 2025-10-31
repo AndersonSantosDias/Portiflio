@@ -5,7 +5,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    height: 100dvh;
+    height: 70dvh;
+    padding-top: 11dvh;
 
     & .redes{
         display: flex;
